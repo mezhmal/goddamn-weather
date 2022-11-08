@@ -1,6 +1,7 @@
 # goddamn-weather
 
-This template should help get you started developing with Vue 3 in Vite.
+It's project just for training my Vue + TS skills.
+It's based on default Vue template.
 
 ## Recommended IDE Setup
 
