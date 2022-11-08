@@ -1,14 +1,18 @@
-@tailwind base;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body {
   min-height: 100vh;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.nav-item > a {
+  display: block;
+  border-radius: 5px;
+  transition: background-color 500ms ease;
 
-  font-weight: normal;
+  &:hover,
+  &:active {
+    background-color: lightblue;
+  }
 }
