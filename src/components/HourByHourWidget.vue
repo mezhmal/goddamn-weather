@@ -1,14 +1,3 @@
-<script lang="ts" setup>
-// prettier doesn't work if vue component contains block <style> without block <script>
-</script>
-
 <template>
-  <div>Hour by hour widget</div>
+  <div class="p-6 text-zinc-500 border border-zinc-200 w-full flex-grow">Hour by hour widget coming soon...</div>
 </template>
-
-<style scoped>
-div {
-  padding: 2em;
-  border: solid 1px yellow;
-}
-</style>

@@ -6,7 +6,7 @@ import HourByHourWidget from '@/components/HourByHourWidget.vue'
 <template>
   <main>
     <div class="sm:flex sm:mr-4">
-      <div class="flex justify-center">
+      <div class="flex justify-center mb-8 sm:mb-0 sm:mr-4">
         <CurrentWidget></CurrentWidget>
       </div>
       <HourByHourWidget></HourByHourWidget>
