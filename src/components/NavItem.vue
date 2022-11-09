@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+// prettier doesn't work if vue component contains block <style> without block <script>
+</script>
+
 <template>
   <div class="nav-item">
     <slot></slot>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import NavItem from '@/components/NavItem.vue'
 import { RouterLink, RouterView } from 'vue-router'
-import NavItem from './components/NavItem.vue'
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import NavItem from './components/NavItem.vue'
       <img
         alt="Weather logo"
         src="@/assets/weather.svg"
-        class="mr-2 h-16 w-16 flex-none sm:h-20 sm:w-20 md:h-24 md:w-24"
+        class="mr-4 h-16 w-16 flex-none sm:h-20 sm:w-20 md:h-24 md:w-24"
       />
       <div class="flex-grow text-center">
         <p class="text-2xl sm:text-4xl md:text-6xl">GD Weather</p>
