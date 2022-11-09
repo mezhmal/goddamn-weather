@@ -13,7 +13,7 @@ import NavItem from './components/NavItem.vue'
       />
       <div class="flex-grow text-center">
         <p class="text-2xl sm:text-4xl md:text-6xl">GD Weather</p>
-        <nav class="mt-4 grid grid-flow-col">
+        <nav class="mt-4 grid grid-flow-col gap-1">
           <NavItem>
             <RouterLink to="/">Home</RouterLink>
           </NavItem>
