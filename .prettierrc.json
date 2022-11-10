@@ -8,5 +8,6 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": true,
   "fluid": false,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "importOrder": ["^@/", "^[./]"]
 }
