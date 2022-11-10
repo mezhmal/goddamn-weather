@@ -16,9 +16,38 @@ const deltaTemper = maxTemper - minTemper || 1
 const graphHeightRatio = (graphHeight - 8) / deltaTemper
 const graphShift = maxTemper * graphHeightRatio + 4
 const graphVerticalPoints = tempers.map((t) => t * graphHeightRatio * -1 + graphShift)
-const points = graphVerticalPoints
-  .map((point, index) => `${index * dayItemWidth + dayItemWidth / 2}, ${point}`)
+
+const curveHorizontalLengh = 20
+
+const dCurve = graphVerticalPoints
+  .map((point, index) => {
+    const graphHorizontalPoint = index * dayItemWidth + dayItemWidth / 2
+    if (index === 0) {
+      return `M ${graphHorizontalPoint - dayItemWidth / 4} ${point} L ${graphHorizontalPoint} ${point}`
+    }
+
+    const prevPoint = graphVerticalPoints[index - 1]
+    const startControlPointX = graphHorizontalPoint - dayItemWidth + curveHorizontalLengh
+    const startControlPointY = index === 1 ? prevPoint : prevPoint + (point - prevPoint) / 4
+    const endControlPointX = graphHorizontalPoint - curveHorizontalLengh
+    let endControlPointY = point
+    const endLineX = graphHorizontalPoint
+    const endLineY = point
+    let tail = `L ${endLineX + dayItemWidth / 4} ${endLineY}`
+
+    if (index + 1 < graphVerticalPoints.length) {
+      const nextPoint = graphVerticalPoints[index + 1]
+      endControlPointY = point - (nextPoint - point) / 4
+      tail = ''
+    }
+
+    return `C ${startControlPointX} ${startControlPointY}, ${endControlPointX} ${endControlPointY}, ${endLineX} ${endLineY} ${tail}`
+  })
   .join(' ')
+const coordinatesForPoints = graphVerticalPoints.map((point, index) => ({
+  x: index * dayItemWidth + dayItemWidth / 2,
+  y: point,
+}))
 </script>
 
 <template>
@@ -37,7 +66,10 @@ const points = graphVerticalPoints
       </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" :height="graphHeight" :width="graphWidth">
-      <polyline :points="points" fill="none" stroke="black" />
+      <path :d="dCurve" fill="none" stroke="#bfdbfe" stroke-width="3" />
+      <g v-for="coordinate in coordinatesForPoints">
+        <circle :cx="coordinate.x" :cy="coordinate.y" r="3" fill="#3b82f6" />
+      </g>
     </svg>
   </div>
 </template>
