@@ -17,10 +17,17 @@ const date = computed(() => format(new Date(), 'iii, MMM d, h:mm aaaa'))
         <span class="text-2xl">°C</span>
       </div>
     </div>
-    <div class="text-xs">
-      <div>Precipitation: 2%</div>
-      <div>Humidity: 90%</div>
-      <div>Wind: 4 m/s</div>
+    <div class="flex text-xs whitespace-nowrap">
+      <div class="mr-4">
+        <div>Precipitation: 2%</div>
+        <div>Humidity: 90%</div>
+        <div>Wind: 4 m/s</div>
+      </div>
+      <div>
+        <div>Fills like: -12°C</div>
+        <div>Sunrise: 7:42 a.m.</div>
+        <div>Sunset: 4:57 p.m.</div>
+      </div>
     </div>
   </div>
 </template>

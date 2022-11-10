@@ -8,12 +8,13 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .nav-item {
   user-select: none;
 
-  > a {
+  :slotted(a) {
     display: block;
+    padding: 4px 16px;
     border-radius: 5px;
     transition: background-color 500ms ease;
 
