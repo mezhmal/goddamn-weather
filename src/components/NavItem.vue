@@ -16,7 +16,7 @@
     display: block;
     padding: 4px 16px;
     border-radius: 5px;
-    transition: background-color 500ms ease;
+    transition: color 250ms, background-color 250ms;
 
     &:hover,
     &:active {
@@ -24,6 +24,7 @@
     }
 
     &.router-link-active {
+      color: #1d4ed8;
       background-color: #bfdbfe;
     }
 
