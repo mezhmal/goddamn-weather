@@ -44,6 +44,30 @@ const data: WeatherHourItem[] = [
     hour: '10 a.m.',
     temperature: -10,
   },
+  {
+    hour: '11 a.m.',
+    temperature: -8,
+  },
+  {
+    hour: '12 a.m.',
+    temperature: -7,
+  },
+  {
+    hour: '1 p.m.',
+    temperature: -9,
+  },
+  {
+    hour: '2 p.m.',
+    temperature: -10,
+  },
+  {
+    hour: '3 p.m.',
+    temperature: -13,
+  },
+  {
+    hour: '4 p.m.',
+    temperature: -17,
+  },
 ]
 </script>
 

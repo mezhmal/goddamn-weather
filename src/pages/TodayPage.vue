@@ -5,28 +5,36 @@ import type { WeatherHourItem } from '@/model'
 
 const data: WeatherHourItem[] = [
   {
-    hour: '5 a.m.',
+    hour: '10 a.m.',
+    temperature: -23,
+  },
+  {
+    hour: '11 a.m.',
+    temperature: -22,
+  },
+  {
+    hour: '12 a.m.',
     temperature: -17,
   },
   {
-    hour: '6 a.m.',
-    temperature: -17,
-  },
-  {
-    hour: '7 a.m.',
+    hour: '1 p.m.',
     temperature: -16,
   },
   {
-    hour: '8 a.m.',
+    hour: '2 p.m.',
     temperature: -15,
   },
   {
-    hour: '9 a.m.',
-    temperature: -13,
+    hour: '3 p.m.',
+    temperature: -17,
   },
   {
-    hour: '10 a.m.',
-    temperature: -9,
+    hour: '4 p.m.',
+    temperature: -19,
+  },
+  {
+    hour: '5 p.m.',
+    temperature: -20,
   },
 ]
 </script>
